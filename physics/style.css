@@ -1,0 +1,195 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #E9ECF4;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(6, auto);
+
+	grid-template-areas: "header header header header"
+						 "book1 book2 book3 book4"
+                         "book5 book6 book7 book8"
+                         "book9 book10 book11 book12"
+                         "book13 book14 book15 book16"
+						 "footer footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .book1,
+.contenedor .book2,
+.contenedor .book3,
+.contenedor .book4,
+.contenedor .book5,
+.contenedor .book6,
+.contenedor .book7,
+.contenedor .book8,
+.contenedor .book9,
+.contenedor .book10,
+.contenedor .book11,
+.contenedor .book12,
+.contenedor .footer {
+	background: #fff;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+.contenedor .header {
+	background: #12203E;
+	color: #fff;
+	grid-area: header;
+	text-align: center;
+	font-size: 150%;
+}
+
+.contenedor .book1,
+.contenedor .book2,
+.contenedor .book3,
+.contenedor .book4,
+.contenedor .book5,
+.contenedor .book6,
+.contenedor .book7,
+.contenedor .book8,
+.contenedor .book9,
+.contenedor .book10,
+.contenedor .book11,
+.contenedor .book12 {
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    height: auto;
+    border:2px;
+    border-style: solid;
+    border-color: #55a8fd;
+    color:#55a8fd;
+
+}
+
+.contenedor .book1:hover,
+.contenedor .book2:hover,
+.contenedor .book3:hover,
+.contenedor .book4:hover,
+.contenedor .book5:hover,
+.contenedor .book6:hover,
+.contenedor .book7:hover,
+.contenedor .book8:hover,
+.contenedor .book9:hover,
+.contenedor .book10:hover,
+.contenedor .book11:hover,
+.contenedor .book12:hover {
+	transform: scale(1.1);
+    background-color: white;
+    border:2px;
+    border-style: solid;
+    border-color: #fAA43D;
+    color: #fAA43D;
+}
+
+.contenedor .book1 {
+    grid-area: book1;
+}
+
+.contenedor .book2 {
+    grid-area: book2;
+}
+
+.contenedor .book3 {
+    grid-area: book3;
+}
+
+.contenedor .book4 {
+    grid-area: book4;
+}
+
+.contenedor .book5 {
+    grid-area: book5;
+}
+
+.contenedor .book6 {
+    grid-area: book6;
+}
+
+.contenedor .book7 {
+    grid-area: book7;
+}
+
+.contenedor .book8 {
+    grid-area: book8;
+}
+
+.contenedor .book9 {
+    grid-area: book9;
+}
+
+.contenedor .book10 {
+    grid-area: book10;
+}
+
+.contenedor .book11 {
+    grid-area: book11;
+}
+
+.contenedor .book12 {
+    grid-area: book12;
+}
+
+.contenedor .footer {
+	background: #12203E;
+	color: #fff;
+	grid-area: footer;
+	height: 30px;
+	font-style: italic;
+	font-size: 70%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header header"
+							"book1 book1 book2 book2"
+                            "book3 book3 book4 book4"
+                            "book5 book5 book6 book6"
+                            "book7 book7 book8 book8"
+                            "book9 book9 book10 book10"
+                            "book11 book11 book12 book12"
+							"footer footer footer footer";
+	}
+
+	.contenedor .widget-1,
+	.contenedor .widget-2,
+	.contenedor .widget-3,
+	.contenedor .widget-4 {
+		height: auto;
+	}
+
+	.contenedor .widget-1:hover,
+	.contenedor .widget-2:hover,
+	.contenedor .widget-3:hover,
+	.contenedor .widget-4:hover {
+		transform: none;
+	}
+
+	.contenedor .request_a_book{
+		height: auto;
+	}
+
+	.contenedor .footer{
+		height: auto;
+	}
+
+}
